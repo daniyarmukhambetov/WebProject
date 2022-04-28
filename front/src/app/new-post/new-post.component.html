@@ -1,0 +1,46 @@
+<div class="car_lists">
+  <p>new-post works!</p>
+  <div *ngFor="let mark of marks" class="mark_name">
+    <button (click)="selectMark(mark.id)">{{mark.name}}</button>
+  </div>
+  <div *ngFor="let model of models" class="models">
+    <button (click)="selectModel(model.id)">{{model.name}}</button>
+  </div>
+  <div *ngFor="let year of years" class="year">
+    <button (click)="selectYear(year.year)">{{year.year}}</button>
+  </div>
+
+  <div *ngFor="let car of cars" class="car_model">
+    <button (click)="selectCar(car.id)">{{car.name}}</button>
+  </div>
+  <div *ngIf="car_id">Машина успешно выбрано!</div>
+  <div *ngIf="car_id > 0">
+    <div>
+      <label for="title">Шапка: </label>
+      <input required="true" type="text" id="title" [(ngModel)]="title" placeholder="Шапка">
+    </div>
+    <div>
+      <label for="description">Описание: </label>
+      <input required="true" type="text" id="description" [(ngModel)]="description" placeholder="Описание">
+    </div>
+    <div>
+      <label for="price">Цена: </label>
+      <input required="true" type="number" id="price" [(ngModel)]="price" placeholder="Цена">
+    </div>
+    <div>
+      <label for="mileage">Пробег: </label>
+      <input required="true" type="number" id="mileage" [(ngModel)]="mileage" placeholder="Пробег">
+    </div>
+    <div>
+      <label for="color">Цвет: </label>
+      <input required="true" type="text" id="color" [(ngModel)]="color" placeholder="Цвет">
+    </div>
+    <div>
+      <label for="city">Город: </label>
+      <input required="true" type="text" id="city" [(ngModel)]="city" placeholder="Город">
+    </div>
+    <button (click)="Post()">Опубликовать</button>
+  </div>
+</div>
+
+

@@ -1,0 +1,8 @@
+<p>my-posts works!</p>
+<div *ngFor="let post of posts">
+  {{post.id}}
+  <br>
+  {{post.title}}
+  {{post.city}}
+  <button (click)="deletePost(post)">Удалить пост</button>
+</div>

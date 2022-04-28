@@ -1,0 +1,10 @@
+<p>post-list works!</p>
+<div *ngFor="let post of posts">
+  {{post.title}}
+  <br>
+  {{post.car.name}}
+  {{post.city}}
+  {{post.poster.number}}
+  <a routerLink="/post/{{post.id}}">Детали</a>
+</div>
+<!--</div>-->
